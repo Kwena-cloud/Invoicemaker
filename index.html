@@ -1,0 +1,87 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Invoice</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Invoice</h1>
+			<address contenteditable>
+				<p>AGRIKWENA</p>
+				<p>140 Section A. Senotlelo<br>Mpumalanga, 065</p>
+				<p>(+27)83 555 1234</p>
+			</address>
+			<span><img alt="" src="http://www.jonathantneal.com/examples/invoice/logo.png"><input type="file" accept="image/*"></span>
+		</header>
+		<article>
+			<h1>Recipient</h1>
+			<address contenteditable>
+				<p>Ramodiegi<br>Primary school</p>
+			</address>
+			<table class="meta">
+				<tr>
+					<th><span>Invoice #</span></th>
+					<td><span contenteditable>101138</span></td>
+				</tr>
+				<tr>
+					<th><span >Date</span></th>
+					<td><span contenteditable><div>
+<script>
+date = new Date().toLocaleDateString();
+document.write(date);
+</script>
+</div></span></td>
+				</tr>
+				<tr>
+					<th><span >Amount Due</span></th>
+					<td>R<span id="prefix" contenteditable></span><span>0.00</span></td>
+				</tr>
+			</table>
+			<table class="inventory">
+				<thead>
+					<tr>
+						<th><span >Item</span></th>
+						<th><span >Description</span></th>
+						<th><span >Rate</span></th>
+						<th><span >Quantity</span></th>
+						<th><span >Price</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="cut">-</a><span contenteditable>Front End Consultation</span></td>
+						<td><span contenteditable>Experience Review</span></td>
+						<td><span data-prefix></span>R<span contenteditable>150.00</span></td>
+						<td><span contenteditable>4</span></td>
+						<td><span data-prefix></span>R<span>600.00</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="add">+</a>
+			<table class="balance">
+				<tr>
+					<th><span contenteditable>Total</span></th>
+					<td><span data-prefix></span>R<span>600.00</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Amount Paid</span></th>
+					<td><span data-prefix></span>R<span contenteditable>0.00</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Balance Due</span></th>
+					<td><span data-prefix></span>R<span>600.00</span></td>
+				</tr>
+			</table>
+		</article>
+		<aside>
+			<h1><span contenteditable>Additional Notes</span></h1>
+			<div contenteditable>
+				<p>Banking details here</p>
+			</div>
+		</aside>
+	</body>
+</html>
